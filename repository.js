@@ -6,7 +6,6 @@ export async function saveQuiz(value) {
 }
 
 export async function saveTime(ip) {
-    console.log(sql);
     const result = await sql`insert into times (ip) values (${ip}) returning ip`
     return result
 }
